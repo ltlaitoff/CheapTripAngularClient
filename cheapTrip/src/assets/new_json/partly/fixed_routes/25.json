@@ -1,1 +1,1 @@
-{"9":{"price":21,"duration":720,"direct_routes":"250128"},"29":{"price":49,"duration":2370,"direct_routes":"250128,90003"}}
+{"9":{"price":21,"duration":720,"direct_routes":["250011"]},"29":{"price":49,"duration":2370,"direct_routes":["250011","90113"]}}
