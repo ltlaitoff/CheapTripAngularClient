@@ -1,6 +1,6 @@
 // type warning = $localize`warning`;
 
-import { type } from "os";
+// import { type } from "os";
 
 // type MessageType = 'warning' | 'error';
 // enum MessageHeader{ oops='Oops!' , ohNo= 'Oh no!' ,unsupported =  'Unsupported!'};

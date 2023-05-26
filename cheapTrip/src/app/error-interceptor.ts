@@ -50,7 +50,8 @@ export class ErrorInterceptor implements HttpInterceptor {
       }),
       catchError((error: HttpErrorResponse) => {
         let errorData: AlertMessage;
-        // console.log ("--==unknown error==-- "+error)
+        console.log('--==unknown error==-- ' + JSON.stringify(error));
+
         switch (true) {
           case error.status === 500:
             errorData = new AlertMessage(
