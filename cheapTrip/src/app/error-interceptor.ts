@@ -52,6 +52,17 @@ export class ErrorInterceptor implements HttpInterceptor {
         let errorData: AlertMessage;
         console.log('--==unknown error==-- ' + JSON.stringify(error));
 
+        if (error.url.includes('new_json')) {
+          console.log(
+            '%c[ErrorInterceptor]:',
+            'color: red;',
+            'Ignoring all `new_json` error',
+            error
+          );
+
+          return throwError(error);
+        }
+
         switch (true) {
           case error.status === 500:
             errorData = new AlertMessage(
