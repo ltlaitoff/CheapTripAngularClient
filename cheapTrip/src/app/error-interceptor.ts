@@ -52,15 +52,11 @@ export class ErrorInterceptor implements HttpInterceptor {
         let errorData: AlertMessage;
         console.log('--==unknown error==-- ' + JSON.stringify(error));
 
-        if (
-          error.status === 404 &&
-          error.statusText === 'Not Found' &&
-          error.url.includes('new_json')
-        ) {
+        if (error.url.includes('new_json')) {
           console.log(
             '%c[ErrorInterceptor]:',
             'color: red;',
-            'Ignoring `new_json` 404 error',
+            'Ignoring all `new_json` error',
             error
           );
 
